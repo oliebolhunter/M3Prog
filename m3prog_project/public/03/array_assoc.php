@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php 
-    $weer = array("dinsdag" => "10c", "woensdag" => "10c");
-    print_r($weer);
+    $weer = array("dinsdag" => "10c", "woensdag" => "10c", "donderdag" => "12c");
+    //print_r($weer);
     ?>
     <table>
 <tr>
@@ -19,15 +19,23 @@
     graden   
     </td>
 </tr>
+
+<?php 
+foreach($weer as $key => $value)
+{
+?>
+
 <tr>
     <td>
-    maandag
+    <?= $key ?>
     </td>
     <td>
-    19c   
+    <?= $value ?> 
     </td>
 </tr>
+<?php
+    }
+    ?>
     </table>
-
 </body>
 </html>
